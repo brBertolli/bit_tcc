@@ -1,0 +1,344 @@
+/* MOBILE */
+
+@keyframes mobileExpandMenu {
+  0% {
+    top: -100vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes mobileCollapseMenu {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+
+
+#mobileMenu {
+  padding: 10px;
+  background-color: #333;
+  /* Cor de fundo mais escura para melhor contraste */
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #000;
+  /* Sombra mais definida */
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Esconde a scrollbar por padrão */
+}
+
+#mobileMenu.active {
+  width: 190px;
+  height: 100%;
+  /* 100% do viewport height */
+  position: fixed;
+  /* Fixa o menu no topo */
+  top: 0;
+  left: 0;
+}
+
+.ref-icon {
+  display: block;
+}
+
+.ref-icon.active {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+
+
+#mobileMenu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mobile-menu-title {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Fonte mais moderna */
+  font-weight: bold;
+}
+
+
+
+.mobileMenuTitle {
+  display: none;
+}
+
+.mobileMenuTitle.active {
+  display: block;
+}
+
+.mobile-menu-icon {
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.mobile-menu-icon:before,
+.mobile-menu-icon:after,
+.mobile-central-bar {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+
+.mobile-central-bar {
+  margin: 5px 0;
+}
+
+.mobile-menu-icon.active:before {
+  transform: translateY(8px) rotate(135deg);
+}
+
+.mobile-menu-icon.active:after {
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+.mobile-central-bar.active {
+  transform: scale(0);
+
+}
+
+
+#mobileMenuItems {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(26, 26, 26, 0.95);
+  /* Aumenta a opacidade para melhorar a leitura */
+  display: none;
+  overflow-y: auto;
+}
+
+#mobileMenuItems.active {
+  display: block;
+  animation: mobileExpandMenu 0.5s forwards;
+}
+
+#mobileMenuItems.collapsing {
+  animation: mobileCollapseMenu 0.5s forwards;
+}
+
+.mobile-menu-list {
+  padding: 20px;
+  /* Espaçamento interno na lista */
+}
+
+.mobile-menu-list h2 {
+  background-color: #0056b3;
+  /* Um tom de azul mais escuro para melhor contraste */
+  color: #FFFFFF;
+  /* Cor do texto para melhor legibilidade */
+  padding: 10px;
+  /* Espaçamento interno para os títulos */
+  margin: 10px 0;
+  /* Espaçamento externo para os títulos */
+}
+
+.mobile-menu-list li {
+  padding: 10px 0;
+  /* Espaçamento vertical entre itens */
+}
+
+.mobile-menu-list .menu-item {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  /* Itens do menu em bloco para facilitar o toque */
+  padding: 10px;
+  /* Espaçamento para cada item do menu */
+}
+
+/* Esconde a scrollbar no Chrome, Safari e Opera */
+#mobileMenu::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-logout {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.mobile-logout svg {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #007bff;
+  /* Cor de fundo do ícone azul para combinar com o menu */
+  color: white;
+  /* Cor do ícone */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Sombra leve para destacar o ícone */
+  cursor: pointer;
+  /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilização do ícone para quando o usuário passa o mouse sobre ele */
+.mobile-logout svg:hover {
+  background-color: #0056b3;
+  /* Uma cor um pouco mais escura quando hover */
+}
+
+
+
+/* DESKTOP */
+#desktopMenu {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 25px;
+  height: 20px;
+  transition: height 0.2s, width 0.3s;
+  overflow-y: auto;
+  scrollbar-width: hidden;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2);
+}
+
+#desktopMenu.active {
+  width: 190px;
+  height: calc(100% - 20px);
+}
+
+#desktopMenu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.desktop-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.desktop-menu-title {
+  display: none;
+  margin: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.desktop-menu-title.active {
+  display: block;
+}
+
+.desktop-menu-icon {
+  width: 30px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.desktop-menu-icon:before,
+.desktop-menu-icon:after,
+.desktop-central-bar {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.desktop-central-bar {
+  margin: 5px 0;
+}
+
+
+.desktop-menu-icon.active:before {
+  transform: translateY(8px) rotate(135deg);
+}
+
+.desktop-menu-icon.active:after {
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+.desktop-central-bar.active {
+  transform: scale(0);
+}
+
+/* Menu Items */
+.desktop-menu-items {
+  display: none;
+
+}
+
+.desktop-menu-items.active {
+  display: block;
+}
+
+.desktop-menu-list {
+  display: block;
+  cursor: pointer;
+}
+
+.desktop-menu-list:hover {
+  color: #007bff;
+}
+
+.desktop-menu-items h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+.desktop-menu-items a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.desktop-menu-items a:hover {
+  color: #007bff;
+  padding-left: 3px;
+  font-weight: bold;
+  text-shadow: -1px 1px 1px rgba(0, 123, 255, 0.5);
+}
+
+@media (min-width: 800px) {
+  #mobileMenu {
+    display: none;
+  }
+
+}
+
+@media (max-width: 800px) {
+  #mobileMenu {
+    display: block;
+  }
+
+  .logout-button {
+    display: none;
+  }
+
+  #desktopMenu {
+    display: none;
+  }
+}

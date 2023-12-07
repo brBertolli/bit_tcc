@@ -1,0 +1,656 @@
+#status {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: -10vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+}
+
+.content-error {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Mensagem flutuante ao topo da página com alertas */
+.slide-mensage {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    animation: slideIn 3s forwards;
+
+}
+
+
+.success {
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgb(53, 171, 112);
+    border-radius: 10px;
+}
+
+.alert {
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgb(224, 77, 77);
+    border-radius: 10px;
+}
+
+.page-title {
+    color: #fff;
+    margin: 10px;
+    font-size: 1.75rem;
+}
+
+.icons {
+    height: 20px;
+    width: 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/* Estilos Formulários */
+.search-div,
+.search-form {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.search-form-title {
+    width: 100%;
+}
+
+.search-form input {
+    width: 90%;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 1rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0.15rem;
+    color: #fff;
+}
+
+.change-label,
+label input {
+    padding: 0;
+    margin: 0 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+fieldset label input[type="checkbox"] {
+    display: flex;
+}
+
+
+/* Estilos Grid */
+.grid-template {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+.contabil,
+.grid-template input,
+.grid-template select,
+.grid-template textarea {
+    padding: 5px;
+    width: calc(100% - 4px);
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.grid-template textarea {
+    font-size: 1rem;
+    overflow: hidden;
+    resize: none;
+    height: 90%;
+}
+
+.valores {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.valores input {
+    max-width: 50%;
+    min-width: 150px;
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 1rem;
+    max-height: 30rem;
+}
+
+fieldset label {
+    width: calc(100% - 1rem);
+}
+
+fieldset input[type="checkbox"] {
+    height: 1rem;
+    width: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    height: calc(100% - 20px)
+}
+
+.extra-larger-field {
+    grid-area: span 1 / span 12;
+}
+
+.larger-field {
+    grid-area: span 1 / span 9;
+}
+
+.normal-field {
+    grid-area: span 1 / span 6;
+}
+
+.small-field {
+    grid-area: span 1 / span 3;
+}
+
+.extra-small-field {
+    grid-area: span 1 / span 2;
+}
+
+.extra-small-field input {
+    max-width: 150px;
+}
+
+.textarea-field {
+    grid-area: span 6 / span 4;
+}
+
+.fieldset-field {
+    grid-area: span 6 / span 4;
+    grid-column: -1;
+}
+
+
+.button-area {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin: 0 100px;
+    order: 9;
+}
+
+.modal-content .button-area {
+    grid: none;
+    margin: 1rem;
+}
+
+.actions {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+.label-icon img,
+button img {
+    max-width: 35px;
+    max-height: 35px;
+    margin: 5px
+}
+
+.label-icon,
+.button-icon {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none
+}
+
+.title-field label,
+.modal .action-btn,
+.modal input[type="button"] {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    min-width: 5rem;
+    width: auto;
+    height: 2rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.success-btn {
+    background-color: #28a745;
+}
+
+.success-btn:hover {
+    background-color: #0c7c26;
+}
+
+.alert-btn {
+    background-color: #dc3545;
+}
+
+.alert-btn:hover {
+    background-color: #9d1422;
+}
+
+.select-btn {
+    background-color: #007bff;
+}
+
+
+s.select-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.cancel-btn {
+    background-color: rgb(181, 178, 178);
+}
+
+.cancel-btn:hover {
+    background-color: #706d6d;
+}
+
+.submit-button {
+    border-style: none;
+    padding: 0.75rem;
+    border-radius: 0.75rex;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 5px -1px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s;
+}
+
+.search-button {
+    position: relative;
+    right: 2.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    scale: 1.025;
+}
+
+.search-button:hover {
+    filter: grayscale(50%);
+    filter: hue-rotate(15%);
+    scale: 1.05;
+}
+
+/* Table CSS */
+table {
+    margin: 20px 0px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-style: none;
+    width: calc(100% - 1rem);
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+table td:nth-child(2) {
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+td {
+    padding: 10px 0;
+}
+
+tr:hover {
+    background-color: #e7e7e7;
+    transition: background-color 0.1s;
+}
+
+tr.lin_success {
+    background-color: #d3efdc;
+}
+
+tr.lin_success:hover {
+    background-color: #a3ecba;
+}
+
+tr.lin_success:hover td.status_data {
+    font-weight: 900;
+}
+
+
+th:hover {
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+
+/* Estilos Modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 50;
+}
+
+
+/* Conteúdo do Modal */
+.modal-content {
+    border-radius: 10px;
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid #111;
+    min-width: 30%;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2);
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 75px 0;
+    border-radius: 15px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Elemento para fechar o modal */
+.close {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn {
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.confirm-msg {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.confirm-msg input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px;
+    max-width: 5rem;
+    text-align: end;
+}
+
+/* Campo de pesquisa dentro do modal */
+#pesquisaCliente {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* Espaço abaixo do campo de pesquisa */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Container para resultados de pesquisa */
+#resultadoPesquisaCliente {
+    max-height: 300px;
+    overflow-y: hidden;
+}
+
+/* Campo onde encontra-se as peças selecionadas */
+#pecasSelecionadas {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.peca-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.peca-nome {
+    flex: 1;
+}
+
+.peca-quantidade {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.remove-peca {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#expandirLabel:hover {
+    filter: grayscale(50%);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+    animation: show-up 0.5s forwards;
+}
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+        /* Começa totalmente transparente */
+        transform: translateY(100%);
+        /* Move o conteúdo para cima, fora da tela */
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        /* Fica totalmente opaco */
+        transform: translateY(0);
+        /* Volta para a posição original */
+    }
+}
+
+
+/* IDs */
+
+#id {
+    max-width: 3rem;
+    text-align: end;
+}
+
+#celular {
+    max-width: 9rem;
+}
+
+#cep {
+    max-width: 7.5rem;
+}
+
+@keyframes slideIn {
+    0% {
+        top: -10vh;
+        opacity: 0;
+    }
+
+    10%,
+    90% {
+        top: 10vh;
+        opacity: 1;
+    }
+
+    100% {
+        top: -10vh;
+        opacity: 0;
+    }
+}
+
+
+/* Animação para o modal aparecer suavemente */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .extra-small-field {
+        grid-column: span 3;
+    }
+
+    .textarea-field {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .small-field {
+        grid-column: span 6;
+    }
+
+    .fieldset-field {
+        grid-column: span 6;
+    }
+
+    .button-area {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .textarea-field {
+        grid-row: -1;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .larger-field {
+        grid-column: span 12;
+    }
+
+    .normal-field {
+        grid-column: span 9;
+    }
+
+    .extra-small-field {
+        grid-column: span 6;
+    }
+
+    .normal-field,
+    .textarea-field,
+    .fieldset-field {
+        grid-column: span 12;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .small-field,
+    .extra-small-field,
+    .fieldset-field {
+        grid-column: span 12;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

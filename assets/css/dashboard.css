@@ -1,0 +1,170 @@
+body {
+    background-color: #222;
+    background-image: url(../img/logo_bit_200x100.png);
+    background-position-x: center;
+    background-position-y: 50vh;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* CABEÇALHO */
+header {
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 7.5vh;
+    justify-content: space-between;
+    margin: 10px;
+    min-height: 25px;
+    min-width: 200px;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.user-primary-info {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.user-primary-info:hover {
+    transition: all 0.25s;
+    scale: 1.05;
+}
+
+.user-profile-img {
+    background-color: white;
+    background-image: url("../img/logo.ico");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-identify {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    color: white;
+
+}
+
+.user-name {
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.user-name p {
+    margin: 0;
+    padding: 0;
+    color: #007bff;
+}
+
+.logo {
+    cursor: pointer;
+    height: 100%;
+}
+
+.logout-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 6px 12px;
+    min-width: 35px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+    scale: 1.05;
+    transition: all 0.5s;
+}
+
+/* Corpo do Dashboard */
+main {
+    display: flex;
+    background-color: rgba(51, 51, 51, 0.95);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    height: calc(92.5vh - 70px);
+    margin: 10px;
+    min-height: 150px;
+    min-width: 200px;
+    z-index: 1000;
+    padding: 10px;
+}
+
+
+.content {
+    margin: 0 10px;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos da barra de rolagem para navegadores WebKit */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 75px 0;
+    border-radius: 15px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.feature p {
+    text-indent: 1rem;
+    text-align: justify;
+}
+
+.feature li {
+    text-align: justify;
+}
+
+/* Mensagem ao enviar */
+.fixed-message {
+    position: fixed;
+    top: 10vh;
+    right: 50vw;
+    z-index: 5;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+}
+
